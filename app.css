@@ -1,0 +1,140 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Mono', monospace;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+    transition: background-color 0.3s ease;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: width 0.3s ease;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.form-row > label {
+    flex-basis: 100%;
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-row > input {
+    flex-grow: 1;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+.form-row > input:focus {
+    border-color: #007BFF;
+}
+
+/* Loading Bar */
+#loading {
+    display: none;
+    width: 100%;
+    height: 10px;
+    background-color: #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+#loading-inside {
+    height: 100%;
+    width: 0%;
+    background-color: #007BFF;
+    transition: width 0.3s ease;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.buttons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.buttons button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Answer Section */
+#answer {
+    display: none;
+    margin-top: 20px;
+    font-size: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Responsive Design */
+@media (min-width: 576px) {
+    body {
+        background-color: #e7f3ff;
+    }
+    .app {
+        max-width: 500px;
+    }
+}
+
+@media (min-width: 768px) {
+    body {
+        background-color: #ffdada;
+    }
+    .app {
+        max-width: 600px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        background-color: #fff0cc;
+    }
+    .app {
+        max-width: 700px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: #ccf5e4;
+    }
+    .app {
+        max-width: 800px;
+    }
+}
